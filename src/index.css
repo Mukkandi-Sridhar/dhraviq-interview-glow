@@ -2,95 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Dhraviq Design System - Premium Interview Platform */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Core Dhraviq Theme - Dark Premium */
+    --dhraviq-bg: 221 47% 5%;        /* #06080f */
+    --dhraviq-surface: 227 45% 8%;   /* #0a0f1c */
+    --dhraviq-elevated: 224 42% 11%; /* #0f1526 */
+    
+    --dhraviq-text: 225 100% 95%;    /* #eef2ff */
+    --dhraviq-muted: 225 29% 73%;    /* #a6b0cf */
+    --dhraviq-subtle: 225 29% 55%;   /* #7a85a3 */
+    
+    /* Accent Colors */
+    --dhraviq-ion: 254 76% 68%;      /* #7c5cff */
+    --dhraviq-aqua: 187 85% 53%;     /* #22d3ee */
+    --dhraviq-mint: 160 84% 53%;     /* #34d399 */
+    
+    /* Interactive States */
+    --dhraviq-ion-glow: 254 76% 68% / 0.2;
+    --dhraviq-aqua-glow: 187 85% 53% / 0.2;
+    --dhraviq-mint-glow: 160 84% 53% / 0.2;
+    
+    /* Status Colors */
+    --dhraviq-success: 142 76% 36%;  /* #16a34a */
+    --dhraviq-warning: 38 92% 50%;   /* #f59e0b */
+    --dhraviq-error: 0 84% 60%;      /* #ef4444 */
+    
+    /* Layout */
+    --dhraviq-radius: 24px;
+    --dhraviq-seam: 1px;
+    --dhraviq-ring: 2px;
+    
+    /* Gradients */
+    --dhraviq-card-gradient: linear-gradient(180deg, 
+      hsl(var(--dhraviq-text) / 0.04) 0%, 
+      hsl(var(--dhraviq-text) / 0.02) 100%);
+    --dhraviq-ion-gradient: linear-gradient(135deg, 
+      hsl(var(--dhraviq-ion)) 0%, 
+      hsl(254 95% 85%) 100%);
+    --dhraviq-score-gradient: linear-gradient(135deg, 
+      hsl(var(--dhraviq-ion)) 0%, 
+      hsl(var(--dhraviq-aqua)) 50%, 
+      hsl(var(--dhraviq-mint)) 100%);
+    
+    /* Shadows */
+    --dhraviq-shadow-sm: 0 1px 2px hsl(var(--dhraviq-bg) / 0.5);
+    --dhraviq-shadow-md: 0 4px 12px hsl(var(--dhraviq-bg) / 0.3);
+    --dhraviq-shadow-lg: 0 12px 24px hsl(var(--dhraviq-bg) / 0.4);
+    --dhraviq-glow: 0 0 20px hsl(var(--dhraviq-ion) / 0.3);
+    
+    /* Standard shadcn mappings for compatibility */
+    --background: var(--dhraviq-bg);
+    --foreground: var(--dhraviq-text);
+    --card: var(--dhraviq-surface);
+    --card-foreground: var(--dhraviq-text);
+    --popover: var(--dhraviq-elevated);
+    --popover-foreground: var(--dhraviq-text);
+    --primary: var(--dhraviq-ion);
+    --primary-foreground: var(--dhraviq-text);
+    --secondary: var(--dhraviq-surface);
+    --secondary-foreground: var(--dhraviq-text);
+    --muted: var(--dhraviq-elevated);
+    --muted-foreground: var(--dhraviq-muted);
+    --accent: var(--dhraviq-ion);
+    --accent-foreground: var(--dhraviq-text);
+    --destructive: var(--dhraviq-error);
+    --destructive-foreground: var(--dhraviq-text);
+    --border: hsl(var(--dhraviq-text) / 0.08);
+    --input: var(--dhraviq-elevated);
+    --ring: var(--dhraviq-ion);
+    --radius: var(--dhraviq-radius);
   }
 }
 
@@ -101,5 +84,123 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: hsl(var(--dhraviq-bg));
+    color: hsl(var(--dhraviq-text));
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Dhraviq Card System */
+  .dhraviq-card {
+    background: var(--dhraviq-card-gradient);
+    border: var(--dhraviq-seam) solid hsl(var(--dhraviq-text) / 0.08);
+    border-radius: var(--dhraviq-radius);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .dhraviq-card-elevated {
+    background: hsl(var(--dhraviq-elevated));
+    border: var(--dhraviq-seam) solid hsl(var(--dhraviq-text) / 0.12);
+    border-radius: var(--dhraviq-radius);
+    box-shadow: var(--dhraviq-shadow-md);
+  }
+  
+  .dhraviq-surface {
+    background: hsl(var(--dhraviq-surface));
+    border: var(--dhraviq-seam) solid hsl(var(--dhraviq-text) / 0.06);
+    border-radius: var(--dhraviq-radius);
+  }
+  
+  /* Interactive Elements */
+  .dhraviq-button-primary {
+    background: var(--dhraviq-ion-gradient);
+    color: hsl(var(--dhraviq-text));
+    border: none;
+    border-radius: calc(var(--dhraviq-radius) / 2);
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dhraviq-button-primary:hover {
+    box-shadow: var(--dhraviq-glow);
+    transform: translateY(-1px);
+  }
+  
+  .dhraviq-button-secondary {
+    background: hsl(var(--dhraviq-surface));
+    color: hsl(var(--dhraviq-text));
+    border: var(--dhraviq-seam) solid hsl(var(--dhraviq-text) / 0.1);
+    border-radius: calc(var(--dhraviq-radius) / 2);
+    font-weight: 500;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dhraviq-button-secondary:hover {
+    background: hsl(var(--dhraviq-elevated));
+    border-color: hsl(var(--dhraviq-ion) / 0.3);
+  }
+  
+  /* Text Styles */
+  .dhraviq-text-gradient {
+    background: var(--dhraviq-score-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Animations */
+  .dhraviq-animate-float {
+    animation: dhraviq-float 6s ease-in-out infinite;
+  }
+  
+  .dhraviq-animate-glow {
+    animation: dhraviq-glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Score Arc */
+  .dhraviq-score-arc {
+    transform-origin: center;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .text-dhraviq-primary { color: hsl(var(--dhraviq-text)); }
+  .text-dhraviq-muted { color: hsl(var(--dhraviq-muted)); }
+  .text-dhraviq-subtle { color: hsl(var(--dhraviq-subtle)); }
+  .text-dhraviq-ion { color: hsl(var(--dhraviq-ion)); }
+  .text-dhraviq-aqua { color: hsl(var(--dhraviq-aqua)); }
+  .text-dhraviq-mint { color: hsl(var(--dhraviq-mint)); }
+  
+  .bg-dhraviq-bg { background-color: hsl(var(--dhraviq-bg)); }
+  .bg-dhraviq-surface { background-color: hsl(var(--dhraviq-surface)); }
+  .bg-dhraviq-elevated { background-color: hsl(var(--dhraviq-elevated)); }
+  .bg-dhraviq-ion { background-color: hsl(var(--dhraviq-ion)); }
+  .bg-dhraviq-aqua { background-color: hsl(var(--dhraviq-aqua)); }
+  .bg-dhraviq-mint { background-color: hsl(var(--dhraviq-mint)); }
+  
+  .border-dhraviq-seam { border-color: hsl(var(--dhraviq-text) / 0.08); }
+  .border-dhraviq-ion { border-color: hsl(var(--dhraviq-ion)); }
+  
+  .shadow-dhraviq-sm { box-shadow: var(--dhraviq-shadow-sm); }
+  .shadow-dhraviq-md { box-shadow: var(--dhraviq-shadow-md); }
+  .shadow-dhraviq-lg { box-shadow: var(--dhraviq-shadow-lg); }
+  .shadow-dhraviq-glow { box-shadow: var(--dhraviq-glow); }
+}
+
+@keyframes dhraviq-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes dhraviq-glow {
+  0% { box-shadow: var(--dhraviq-glow); }
+  100% { box-shadow: 0 0 30px hsl(var(--dhraviq-ion) / 0.5); }
 }

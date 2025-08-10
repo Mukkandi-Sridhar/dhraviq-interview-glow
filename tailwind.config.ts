@@ -61,6 +61,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				dhraviq: {
+					bg: 'hsl(var(--dhraviq-bg))',
+					surface: 'hsl(var(--dhraviq-surface))',
+					elevated: 'hsl(var(--dhraviq-elevated))',
+					text: 'hsl(var(--dhraviq-text))',
+					muted: 'hsl(var(--dhraviq-muted))',
+					subtle: 'hsl(var(--dhraviq-subtle))',
+					ion: 'hsl(var(--dhraviq-ion))',
+					aqua: 'hsl(var(--dhraviq-aqua))',
+					mint: 'hsl(var(--dhraviq-mint))',
+					success: 'hsl(var(--dhraviq-success))',
+					warning: 'hsl(var(--dhraviq-warning))',
+					error: 'hsl(var(--dhraviq-error))'
 				}
 			},
 			borderRadius: {
@@ -84,11 +98,56 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'dhraviq-float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'33%': { transform: 'translateY(-10px) rotate(1deg)' },
+					'66%': { transform: 'translateY(-5px) rotate(-1deg)' }
+				},
+				'dhraviq-glow': {
+					'0%': { boxShadow: 'var(--dhraviq-glow)' },
+					'100%': { boxShadow: '0 0 30px hsl(var(--dhraviq-ion) / 0.5)' }
+				},
+				'dhraviq-slide-up': {
+					'0%': { transform: 'translateY(100%)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'dhraviq-slide-in': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'dhraviq-scale-in': {
+					'0%': { transform: 'scale(0.9)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'dhraviq-bounce': {
+					'0%': { transform: 'scale(0.3)', opacity: '0' },
+					'50%': { transform: 'scale(1.05)' },
+					'70%': { transform: 'scale(0.9)' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'dhraviq-float': 'dhraviq-float 6s ease-in-out infinite',
+				'dhraviq-glow': 'dhraviq-glow 2s ease-in-out infinite alternate',
+				'dhraviq-slide-up': 'dhraviq-slide-up 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+				'dhraviq-slide-in': 'dhraviq-slide-in 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+				'dhraviq-scale-in': 'dhraviq-scale-in 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+				'dhraviq-bounce': 'dhraviq-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+			},
+			backdropBlur: {
+				'dhraviq': '20px'
+			},
+			boxShadow: {
+				'dhraviq-sm': 'var(--dhraviq-shadow-sm)',
+				'dhraviq-md': 'var(--dhraviq-shadow-md)',
+				'dhraviq-lg': 'var(--dhraviq-shadow-lg)',
+				'dhraviq-glow': 'var(--dhraviq-glow)'
+			},
+			fontFamily: {
+				'dhraviq': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
 			}
 		}
 	},
