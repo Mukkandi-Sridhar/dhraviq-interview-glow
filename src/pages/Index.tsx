@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { DhraviqLogo } from "@/components/DhraviqLogo";
 import { ResumeUpload } from "@/components/ResumeUpload";
-import { Dashboard } from "@/pages/Dashboard";
+import { Dashboard } from "@/pages/enhanced/Dashboard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Target, Zap } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
